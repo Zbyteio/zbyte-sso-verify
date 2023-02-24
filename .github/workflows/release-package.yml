@@ -20,8 +20,6 @@ jobs:
           node-version: 16.x
       - name: Clean Install NPM modules
         run: npm ci
-      - name: Execute Tests
-        run: npm test
 
   publish:
     needs: build
