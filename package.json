@@ -4,7 +4,7 @@
     "registry": "https://npm.pkg.github.com/Zbyteio"
   },
   "version": "1.0.0",
-  "description": "Verify zbyte keycloak service. Checks if the token is valid and retrived claims from the token.",
+  "description": "Verify zbyte sso service. Checks if the token is valid and retrived claims from the token.",
   "main": "dist/bundle.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -20,15 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zbyteio/zbyte-keycloak-verify.git"
+    "url": "git+https://github.com/Zbyteio/zbyte-sso-verify.git"
   },
   "keywords": [],
   "author": "Milind Sahoo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Zbyteio/zbyte-keycloak-verify/issues"
+    "url": "https://github.com/Zbyteio/zbyte-sso-verify/issues"
   },
-  "homepage": "https://github.com/Zbyteio/zbyte-keycloak-verify#readme",
+  "homepage": "https://github.com/Zbyteio/zbyte-sso-verify#readme",
   "devDependencies": {
     "@types/node": "^18.14.1",
     "prettier": "^2.8.4",
