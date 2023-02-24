@@ -1,14 +1,14 @@
 {
   "name": "zbyte-keycloak-verify",
   "version": "1.0.0",
-  "description": "Verify zbyte keycloak service",
+  "description": "Verify zbyte keycloak service. Checks if the token is valid and retrived claims from the token.",
   "main": "index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepublishOnly": "npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
