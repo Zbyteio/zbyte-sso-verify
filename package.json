@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Zbyteio"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Verify zbyte sso service. Checks if the token is valid and retrived claims from the token.",
   "main": "dist/bundle.js",
   "types": "dist/index.d.ts",
