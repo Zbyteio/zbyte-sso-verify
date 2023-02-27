@@ -1,9 +1,10 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
 	entry: './src/index.ts',
 	mode: 'development',
-	target: 'web',
+	target: 'node',
 	devtool: 'source-map',
 	output: {
 		filename: 'bundle.js',
@@ -36,11 +37,5 @@ module.exports = {
             "stream": false,
             "crypto": false
         },
-		plugins: [
-			new webpack.ProvidePlugin({
-				 Buffer: ['buffer', 'Buffer'],
-				 process: 'process/browser',
-			}),
-		], 
     }
 };
