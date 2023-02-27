@@ -35,6 +35,12 @@ module.exports = {
             "util": false,
             "stream": false,
             "crypto": false
-          } 
+        },
+		plugins: [
+			new webpack.ProvidePlugin({
+				 Buffer: ['buffer', 'Buffer'],
+				 process: 'process/browser',
+			}),
+		], 
     }
 };
