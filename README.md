@@ -28,7 +28,7 @@ Before installing the lib user need to add .npmrc file in home directory which w
 ```
 You can install the library using npm package manager
 ```
-npm install @zbyteio/zbyte-common@1.0.3
+npm install @zbyteio/zbyte-sso-verify
 ```
 Install via package.json
 ```
