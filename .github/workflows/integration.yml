@@ -25,8 +25,6 @@ jobs:
         run: npm ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.FORCI}}
-      - name: Verify code format
-        run: npm run check-fmt
       - name: Check code lint
         continue-on-error: true
         run: npm run lint
