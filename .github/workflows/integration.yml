@@ -1,11 +1,12 @@
-name: zybte-sso-verify package
+name: development zybte-sso-verify
 
 on:
   push:
     branches:
-      - 'master'
-    tags:
-      - 'v*'
+      - 'CI'
+  pull_request:
+    branches:
+      - 'CI'
 
 jobs:
   code-quality-check:
@@ -36,7 +37,7 @@ jobs:
     permissions:
       packages: write
       contents: read
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: github.event_name == 'push'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -49,9 +50,8 @@ jobs:
           scope: '@zbyteio'
       - name: Version
         run: |
-          version=$(echo ${{ github.ref_name }} | cut -d'v' -f2)
-          echo "The tagged version is $version"
-          jq ".version = \"$version\"" package.json > /tmp/file && mv /tmp/file package.json 
+          commit=$(git rev-parse HEAD | head -c 7)
+          jq ".version = \"0.0.0-$commit\"" package.json > /tmp/file && mv /tmp/file package.json 
       - name: Clean Install NPM modules
         run: npm ci
         env:
